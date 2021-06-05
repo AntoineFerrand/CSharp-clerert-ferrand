@@ -1,0 +1,14 @@
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\Database.dll
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\Database.pdb
+C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.csprojAssemblyReference.cache
+C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.dll
+C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.pdb
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\Database\Database1.mdf
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\Database\Database1_log.ldf
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\Database.dll.config
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\EntityFramework.dll
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\EntityFramework.xml
+C:\Users\frcleret\source\repos\TP Csharp\Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.csproj.CopyComplete
