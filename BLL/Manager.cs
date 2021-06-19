@@ -23,6 +23,37 @@ namespace BLL
             }
         }
 
+        public List<Postulation> GetPostulationByEmployeId(int id)
+        {
+            return new PostulationQuery().Postulations.Where(e => e.EmployeId == id).ToList();
+        }
+
+        public void InsertPostulation(int offreId)
+        {
+            new PostulationQuery().Postulations.Append(new Postulation {
+                Date = DateTime.Now.ToString(),
+                Offre = getOffre(offreId),
+                OffreId = offreId,
+                Employe = getEmploye(0),
+                EmployeId = 0
+            });
+        }
+
+        public List<Offre> GetOffresByContain(string searchQuery)
+        {
+            return new OffreQuery().Offres.Where(e => e.Intitule.Contains(searchQuery)).ToList();
+        }
+
+        public Offre getOffre(int id)
+        {
+            return new OffreQuery().Offres.Where(e => e.Id == id).FirstOrDefault();
+        }
+
+        public Employe getEmploye(int id)
+        {
+            return new EmployeQuery().Employes.Where(e => e.Id == id).FirstOrDefault();
+        }
+
         public List<Offre> GetAllOffres()
         {
             return new OffreQuery().Offres.ToList();

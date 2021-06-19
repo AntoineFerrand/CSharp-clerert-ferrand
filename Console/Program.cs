@@ -26,7 +26,7 @@ namespace Console
 
             try
             {
-                System.Console.WriteLine(Manager.Instance.Offre().GetOffres);
+                System.Console.WriteLine(Manager.Instance.GetAllOffres());
             }
             catch(Exception e)
             {

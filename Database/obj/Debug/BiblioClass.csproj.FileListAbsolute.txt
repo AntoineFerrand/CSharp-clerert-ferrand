@@ -11,4 +11,3 @@ C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\BiblioClass.csproj.C
 C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\BiblioClass.csproj.CopyComplete
 C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.dll
 C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\Database.pdb
-C:\Users\frcleret\source\repos\TP Csharp\Database\obj\Debug\BiblioClass.csprojAssemblyReference.cache

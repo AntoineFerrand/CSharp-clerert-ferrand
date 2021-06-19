@@ -1,0 +1,15 @@
+﻿@using WebApp.Models.Postulation
+@model List<PostulationViewModel>
+@{
+    ViewBag.Title = "Liste des postulations";
+}
+
+<h2>@ViewBag.Title</h2>
+<div>
+@foreach (var postulation in Model)
+{
+    <div>@postulation.Date</div>
+    <div>@postulation.Statut</div>
+}
+</div>
+
