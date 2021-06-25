@@ -5,11 +5,14 @@
 }
 
 <h2>@ViewBag.Title</h2>
-<div>
+<div class="container-fluid bg-primary">
 @foreach (var postulation in Model)
 {
-    <div>@postulation.Date</div>
-    <div>@postulation.Statut</div>
+    <div class="container-fluid bg-info" style="display: block; color: #333; margin: 1rem;">
+        <div>Date : @postulation.Date</div>
+        <div>Statut : @postulation.Statut</div>
+        <div>Ref. de l'offre : @postulation.OffreId</div>
+    </div>
 }
 </div>
 

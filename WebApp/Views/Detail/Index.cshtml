@@ -18,5 +18,12 @@
 
     <hr />
 
-    <a href="@Url.Action("RegisterPostulation", "Detail", new { id = Model.Id })" class="btn btn-success">Je postule</a>
+    @if (Model.HasPostuled)
+    {
+        <a href="@Url.Action("RegisterPostulation", "Detail", new { id = Model.Id })" class="btn btn-danger">Enlever la postulation</a>
+    }
+    else
+    {
+        <a href="@Url.Action("RegisterPostulation", "Detail", new { id = Model.Id })" class="btn btn-success">Je postule</a>
+    }
 </div>

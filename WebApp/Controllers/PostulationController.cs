@@ -20,11 +20,16 @@ namespace WebApp.Controllers
 
         public ActionResult Index()
         {
-            List<Postulation> postulations = manager.GetPostulationByEmployeId(0);
+            List<Postulation> postulations = manager.GetPostulationByEmployeId(5);
             List<PostulationViewModel> postulationsVm = new List<PostulationViewModel>();
             foreach (var postulation in postulations)
             {
-                postulationsVm.Add(new PostulationViewModel { Date = postulation.Date, Statut = postulation.Statut });
+                postulationsVm.Add(new PostulationViewModel
+                {
+                    Date = postulation.Date,
+                    Statut = postulation.Statut,
+                    OffreId = postulation.OffreId
+                });
             }
 
             return View(postulationsVm);

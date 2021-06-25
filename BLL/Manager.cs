@@ -1,5 +1,6 @@
 ﻿using BiblioClass;
 using BiblioClass.Entity;
+using BLL.Command;
 using BLL.Query;
 using System;
 using System.Collections.Generic;
@@ -28,15 +29,24 @@ namespace BLL
             return new PostulationQuery().Postulations.Where(e => e.EmployeId == id).ToList();
         }
 
+        public Postulation GetPostulationByOffreId(int id)
+        {
+            return new PostulationQuery().Postulations.Where(e => e.OffreId == id).FirstOrDefault();
+        }
+
         public void InsertPostulation(int offreId)
         {
-            new PostulationQuery().Postulations.Append(new Postulation {
+            new PostulationCommand().Add(new Postulation {
                 Date = DateTime.Now.ToString(),
-                Offre = getOffre(offreId),
+                Statut = "En cours",
                 OffreId = offreId,
-                Employe = getEmploye(0),
-                EmployeId = 0
+                EmployeId = 5
             });
+        }
+
+        public void RemovePostulation(int offreId)
+        {
+            new PostulationCommand().Remove(offreId);
         }
 
         public List<Offre> GetOffresByContain(string searchQuery)

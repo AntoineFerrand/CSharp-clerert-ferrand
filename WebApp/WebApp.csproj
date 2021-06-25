@@ -174,6 +174,7 @@
     <Content Include="Views\Offres\Index.cshtml" />
     <Content Include="Views\Detail\Index.cshtml" />
     <Content Include="Views\Postulation\Index.cshtml" />
+    <Content Include="Views\Detail\RegisterPostulation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

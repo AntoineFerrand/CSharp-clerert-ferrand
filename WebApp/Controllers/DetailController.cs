@@ -25,7 +25,14 @@ namespace WebApp.Controllers
 
         public ActionResult RegisterPostulation(int id)
         {
-            manager.InsertPostulation(id);
+            if (GetOffre(id).HasPostuled)
+            {
+                manager.RemovePostulation(id);
+            }
+            else
+            {
+                manager.InsertPostulation(id);
+            }
             return View(GetOffre(id));
         }
 
@@ -39,7 +46,8 @@ namespace WebApp.Controllers
                 Description = offre.Description,
                 Date = offre.Date,
                 Salaire = offre.Salaire,
-                Responsable = offre.Responsable
+                Responsable = offre.Responsable,
+                HasPostuled = manager.GetPostulationByOffreId(id) != null
             };
             return offreVm;
         }
