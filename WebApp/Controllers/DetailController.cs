@@ -20,12 +20,12 @@ namespace WebApp.Controllers
 
         public ActionResult Index(int id)
         {
-            return View(GetOffre(id));
+            return View(OffreViewModel.PopulateById(id));
         }
 
         public ActionResult RegisterPostulation(int id)
         {
-            if (GetOffre(id).HasPostuled)
+            if (OffreViewModel.PopulateById(id).HasPostuled)
             {
                 manager.RemovePostulation(id);
             }
@@ -33,23 +33,7 @@ namespace WebApp.Controllers
             {
                 manager.InsertPostulation(id);
             }
-            return View(GetOffre(id));
-        }
-
-        public OffreViewModel GetOffre(int id)
-        {
-            Offre offre = manager.getOffre(id);
-            OffreViewModel offreVm = new OffreViewModel
-            {
-                Id = offre.Id,
-                Intitule = offre.Intitule,
-                Description = offre.Description,
-                Date = offre.Date,
-                Salaire = offre.Salaire,
-                Responsable = offre.Responsable,
-                HasPostuled = manager.GetPostulationByOffreId(id) != null
-            };
-            return offreVm;
+            return View(OffreViewModel.PopulateById(id));
         }
     }
 }
